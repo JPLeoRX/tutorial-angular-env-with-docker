@@ -5,7 +5,7 @@ FROM node:latest as node
 RUN npm install -g @angular/cli
 
 # Copy our app's source code
-COPY ./app /app
+COPY . /app
 WORKDIR /app
 
 # Build our Angular app
