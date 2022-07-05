@@ -1,0 +1,19 @@
+docker build -t tutorial-env:latest .
+
+docker run \
+    --name=tutorial-env \
+    --rm \
+    -ti \
+    -e API_URL=http://another-url \
+    -e API_KEY=58GDFGwXsZLXxZXwh9pmdUxZ \
+    -p 4200:4200 \
+    tutorial-env:latest
+
+docker run \
+    --name=tutorial-env \
+    --rm \
+    -ti \
+    -e API_URL=http://beta.another-url \
+    -e API_KEY=GBqy23Jr5DZgPsKutvtKsvNQ \
+    -p 4200:4200 \
+    tutorial-env:latest
